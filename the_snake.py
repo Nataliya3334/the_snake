@@ -178,6 +178,7 @@ def handle_keys(self):
             elif event.key == pygame.K_RIGHT and self.direction != LEFT:
                 self.next_direction = RIGHT
 
+
 def main():
     """Инициализация PyGame."""
     pygame.init()
