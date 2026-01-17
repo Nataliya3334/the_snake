@@ -1,4 +1,6 @@
-from random import choice, randint
+"""Простая игра Змейка с использованием Pygame."""
+
+from random import randint
 
 import pygame
 
@@ -50,11 +52,9 @@ class GameObject:
     """
 
     def __init__(self, position=(0, 0), body_color=(255, 255, 255)):
+        """Инициализация объекта игры."""
         self.position = position
         self.body_color = body_color
-        """
-        Инициализация объекта игры.
-        """
 
     def draw(self):
         """Заглушка для отрисовки."""
@@ -71,6 +71,7 @@ class Apple(GameObject):
     """
 
     def __init__(self, position=(0, 0)):
+        """Иницилизация яблока."""
         super().__init__(position, body_color=(255, 0, 0))  # Красное яблоко
 
     def draw(self):
@@ -101,6 +102,7 @@ class Snake(GameObject):
     """
 
     def __init__(self, position=(0, 0)):
+        """Инициализация змейки."""
         super().__init__(position, body_color=(0, 255, 0))  # Зелёная змейка
         self.length = 1
         self.positions = [position]
@@ -177,6 +179,7 @@ def handle_keys(self):
                 self.next_direction = LEFT
             elif event.key == pygame.K_RIGHT and self.direction != LEFT:
                 self.next_direction = RIGHT
+
 
 def main():
     """Инициализация PyGame."""
