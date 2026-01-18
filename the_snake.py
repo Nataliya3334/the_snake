@@ -1,6 +1,7 @@
 """Простая игра Змейка с использованием Pygame."""
+from random import choice, randint
+
 import pygame as pg
-from random import randint, choice
 
 # Константы для размеров поля и сетки:
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
