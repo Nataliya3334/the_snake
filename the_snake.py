@@ -69,6 +69,10 @@ class GameObject:
         pg.draw.rect(screen, self.body_color, rect)
         pg.draw.rect(screen, self.border_color, rect, 1)
 
+    def draw(self):
+        """Метод draw для автотестов."""
+        self.draw_cell(self.position)
+
 
 class Apple(GameObject):
     """
